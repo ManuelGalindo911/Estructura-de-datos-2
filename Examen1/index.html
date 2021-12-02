@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Examen 1</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+
+  <!-- CONTENEDOR DE LAS ACCIONES DISPONIBLES -->
+  <div class="container">
+    <button id="showInsertBtn">Insertar</button>
+  </div>
+
+  <hr>
+
+  <!-- CONTENEDOR DEL FORMULARIO -->
+  <div class="container">
+    <p id="noForm">- - -</p>
+    <form id="mainForm" class="no-active">
+      <label for="matricula">Matricula</label>
+      <input type="number" id="matricula" required>
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" required>
+
+      <label for="materia">Materia</label>
+      <input type="text" id="materia" required>
+
+      <label for="calificacion">Calificacion</label>
+      <input type="number" id="calificacion" required>
+
+      <p id="dataError" class="no-active">Revisa los datos, parece que algo esta incompleto!</p>
+      <br>
+      <button id="insertBtn" class="">Listo</button>
+    </form>
+  </div>
+
+  <hr>
+
+  <!-- CONTENEDOR DEL FORMULARIO DE BUSQUEDA -->
+  <div id="searchForm" class="container no-active">
+    <form>
+      <input type="search" id="searchInput" placeholder="Inserte una matricula">
+      <button id="searchBtn">Buscar</button>
+      <button id="allBtn">Mostrar Todos</button>
+      <br>
+    </form>
+  </div>
+
+  <!-- CONTENEDOR EN DONDE SE INSERTARAN LOS DATOS -->
+  <div class="container" id="dataContainer">
+
+  </div>
+  
+  <script src="index.js"></script>
+</body>
+</html>
