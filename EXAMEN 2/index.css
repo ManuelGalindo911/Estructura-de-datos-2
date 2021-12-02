@@ -1,0 +1,156 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh 50vh;
+  font-family: "Ubuntu", sans-serif;
+}
+
+input {
+  font-family: "Ubuntu", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.preview {
+  padding: 10px 0;
+  background-color: #000;
+  color: #39ff14;
+  font-family: "Fira Code", monospace;
+  overflow-y: auto;
+}
+
+.operations {
+  background-color: white;
+  overflow-y: auto;
+}
+
+.structures {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.structures button {
+  flex: 1;
+  background-color: white;
+  transition: 0.3s all ease;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.structures button:hover {
+  background-color: black;
+  color: white;
+}
+
+.action {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  font-size: 1.8rem;
+}
+
+.action > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.action button {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: 0.3s all ease;
+}
+
+.action button:hover {
+  opacity: 0.6;
+  background-color: black;
+  color: white;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  background-color: white;
+}
+
+input:focus {
+  outline: 2px solid black;
+}
+
+.preview > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.preview > div {
+  padding: 10px;
+}
+
+.preview > div > div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+  font-size: 1.8rem;
+}
+
+.preview h2,
+.preview p {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.preview > div > div > div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 2px solid #39ff14;
+  color: #39ff14;
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+
+  .structures {
+    grid-column: auto;
+    grid-row: 1 / 1;
+  }
+}
